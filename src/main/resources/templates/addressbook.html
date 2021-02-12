@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Address book</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${isEmpty == true}">
+        <td colspan="3">Address Book is empty or does not exist</td>
+    </tr>
+    <tr th:if="${isEmpty == false}" th:each="bud : ${book}">
+        <td><span th:text="${bud.name}"> Name </span></td>
+        <td><span th:text="${bud.address}"> Address </span></td>
+        <td><span th:text="${bud.phoneNumber}"> Phone Number </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
