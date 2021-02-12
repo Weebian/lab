@@ -24,7 +24,7 @@ public class BuddyInfo {
     private String name;
     private String address;
     private String phoneNumber;
-    private int num_rocks;
+    private int num_stonks;
 
     protected BuddyInfo(){}
 
