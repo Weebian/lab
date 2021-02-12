@@ -1,1 +1,2 @@
+before_install:   - chmod +x mvnw
 language: Java
