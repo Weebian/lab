@@ -24,7 +24,7 @@ public class BuddyInfo {
     private String name;
     private String address;
     private String phoneNumber;
-    private int num_stonks;
+    private int numStonks;
 
     protected BuddyInfo(){}
 
@@ -32,6 +32,7 @@ public class BuddyInfo {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        numStonks = 0;
     }
 
     public Long getId(){
@@ -60,6 +61,14 @@ public class BuddyInfo {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public void setNumStonks(int numStonks){
+        this.numStonks = numStonks;
+    }
+
+    public int getNumStonks(){
+        return numStonks;
     }
 
     @Override
