@@ -3,8 +3,5 @@ before_install:
 language: Java
 deploy:
  provider: heroku
- api-key:
-  secure: $HEROKU_API_KEY
+ api-key: $HEROKU_API_KEY
  app: thelababovealllabs
- on:
-  repo: Weebian/thelababovealllabs
