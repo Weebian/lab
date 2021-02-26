@@ -26,6 +26,10 @@ public class AddressBook {
         return id;
     }
 
+    public void setId(Long id){
+        this.id = id;
+    }
+
     public List<BuddyInfo> getBudList() {
         return budList;
     }

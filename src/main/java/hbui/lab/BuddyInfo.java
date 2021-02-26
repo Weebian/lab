@@ -63,6 +63,10 @@ public class BuddyInfo {
         return phoneNumber;
     }
 
+    public void setBook(AddressBook book){
+        this.book = book;
+    }
+
     public void setNumStonks(int numStonks){
         this.numStonks = numStonks;
     }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Book form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="budform.js"></script>
+</head>
+<body>
+    <h1>Buddy Info form</h1>
+    <form action="#" th:action="@{/budform/} + ${id}" th:object="${bud}" method="post">
+        <p>Name: <input type="text" th:field="*{name}"/></p>
+        <p>Address: <input type="text" th:field="*{address}"/></p>
+        <p>Phone Number: <input type="text" th:field="*{phoneNumber}"/></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+    </form>
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Address book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="addressbook.js"></script>
 </head>
 <body>
 <table>
@@ -14,15 +16,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:if="${isEmpty == true}">
-        <td colspan="3">Address Book is empty or does not exist</td>
+    <tr id="emptr" th:if="${isEmpty == true}">
+        <td colspan="3">Address Book does not exist</td>
     </tr>
-    <tr th:if="${isEmpty == false}" th:each="bud : ${book}">
-        <td><span th:text="${bud.name}"> Name </span></td>
-        <td><span th:text="${bud.address}"> Address </span></td>
-        <td><span th:text="${bud.phoneNumber}"> Phone Number </span></td>
+    <tr id="fulltr" th:if="${isEmpty == false}" th:each="bud : ${book}">
+        <td><span id="name" th:text="${bud.name}"> Name </span></td>
+        <td><span id="address" th:text="${bud.address}"> Address </span></td>
+        <td><span id="phoneNumber" th:text="${bud.phoneNumber}"> Phone Number </span></td>
     </tr>
     </tbody>
 </table>
+<a th:href="'/budform/' + ${id}">Add a buddy</a>
 </body>
 </html>
